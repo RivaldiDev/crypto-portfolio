@@ -1,47 +1,109 @@
-# CoinFolio - Crypto Portfolio Tracker
+<div align="center">
 
-Real-time crypto portfolio tracker with market dominance, volume, and asset analytics
+# CoinFolio
+
+**Real-time crypto portfolio tracker with market dominance, volume, and asset analytics.**
+
+[![Tech Stack](https://skillicons.dev/icons?i=nextjs,typescript,tailwind,github&theme=dark&perline=4)](https://skillicons.dev)
+
+![Next.js](https://img.shields.io/badge/Next.js_16-App_Router-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn/ui-Components-000000?style=for-the-badge)
+![CoinCap-API-green](https://img.shields.io/badge/CoinCap--API--green)
+
+[![GitHub](https://img.shields.io/badge/Source_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RivaldiDev/crypto-portfolio)
+[![Vercel](https://img.shields.io/badge/Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://crypto-portfolio-pi.vercel.app)
+
+[Overview](#overview) · [Features](#features) · [Tech Stack](#tech-stack) · [API](#api) · [Getting Started](#getting-started) · [Architecture](#architecture)
+
+</div>
+
+---
+
+## Overview
+
+Real-time crypto portfolio tracker with market dominance, volume, and asset analytics.
+
+Built with **Next.js 16** (App Router, TypeScript), **shadcn/ui** component library, **Tailwind CSS**, and **Framer Motion** for animations. All data is fetched client-side from free public APIs — no API keys required, no backend server.
+
+This project was developed using AI Agent tools (**Claude Code**, **Hermes Agent**) as part of the **Xiaomi MiMo 100T Token Creator** program.
 
 ## Features
 
-- Top 20 assets by market cap
-- Portfolio summary with total market cap
-- 24h change tracking with color badges
-- Market dominance progress bars
-- Supply and volume information
-- Best performer highlight
+| Area | What it does |
+| --- | --- |
+| **Portfolio Summary** | Total market cap, best 24h performer, and top gainer highlights. |
+| **Asset Table** | Top 20 assets with price, 24h change, market cap, volume, supply. |
+| **Dominance Bars** | Visual market dominance progress bars for each asset. |
+| **Live Data** | Real-time data from CoinCap API v3 with auto-refresh. |
+| **UI/UX** | Emerald/blue gradient dark theme with glassmorphism summary card. |
 
 ## Tech Stack
 
-- **Framework:** Next.js 16 (App Router, TypeScript)
-- **UI:** shadcn/ui + Tailwind CSS
-- **Animations:** Framer Motion
-- **API:** CoinCap API v3 (Free)
-- **Deployment:** Vercel
-
-🔗 **Live Demo:** [https://crypto-portfolio-pi.vercel.app](https://crypto-portfolio-pi.vercel.app)
-
-## GitHub
-
-🔗 **Source Code:** [github.com/RivaldiDev/crypto-portfolio](https://github.com/RivaldiDev/crypto-portfolio)
+| Layer | Technology |
+| --- | --- |
+| **Framework** | Next.js 16 (App Router, TypeScript) |
+| **UI Components** | shadcn/ui (Radix + Tailwind) |
+| **Styling** | Tailwind CSS 4 |
+| **Animations** | Framer Motion |
+| **API** | CoinCap API v3 (Free, No API Key) |
+| **Deployment** | Vercel |
 
 ## API
 
-This project uses **CoinCap API v3 (Free)** — completely free, no API key required.
+This project uses **CoinCap API v3** — completely free, no authentication required.
+
+| Endpoint | Purpose |
+| --- | --- |
+| Free tier | No rate limiting for reasonable usage |
+| No API key | Direct fetch from browser |
+| CORS | Enabled for client-side requests |
 
 ## Getting Started
 
 ```bash
+# Clone the repository
+git clone https://github.com/RivaldiDev/crypto-portfolio.git
+cd crypto-portfolio
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Built With
+## Architecture
 
-This project was built using AI Agent tools (Claude Code, Hermes Agent) as part of the Xiaomi MiMo 100T Token Creator program.
+```
+src/
+├── app/
+│   ├── layout.tsx        # Root layout with metadata
+│   ├── page.tsx          # Main dashboard page (client component)
+│   └── globals.css       # Tailwind CSS globals
+├── components/
+│   └── ui/               # shadcn/ui components (Card, Badge, etc.)
+└── lib/
+    └── utils.ts          # Utility functions (cn helper)
+```
 
-## License
+## Deployment
 
-MIT
+This project is deployed on **Vercel** with automatic deployments from the `main` branch.
+
+```bash
+# Deploy to Vercel
+npx vercel --prod
+```
+
+---
+
+<div align="center">
+
+**Built with AI Agent tools** · Xiaomi MiMo 100T Token Creator Program
+
+![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+</div>
